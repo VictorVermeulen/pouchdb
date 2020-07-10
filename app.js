@@ -1,4 +1,4 @@
-var db = new PouchDB("kittens");
+var db = new PouchDB("kittens", { adapter: "worker" });
 var docs = new Array();
 for (i = 0; i < 1000000; i++) {
   var doc = {
@@ -8,7 +8,7 @@ for (i = 0; i < 1000000; i++) {
   docs[i] = doc;
 }
 db.bulkDocs(docs)
-  .then(function(res) {})
-  .catch(function(err) {
+  .then(function (res) {})
+  .catch(function (err) {
     console.log(err);
   });
