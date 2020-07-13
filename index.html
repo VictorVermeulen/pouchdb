@@ -13,19 +13,19 @@
     <h1>PouchDB Test</h1>
     <p>Because we all love PouchDB</p>
 
-    <button onClick="Add10Entries(10)">Add 10 Entries to DB</button>
-    <button onClick="Add10Entries(100)">Add 100 Entries to DB</button>
-    <button onClick="GetAllEntries()">Get all Docs</button>
-    <button onClick="DeleteAllDocs()">Delete all Docs</button>
+    <button onClick="buttonClicked(10)">Add 10 Entries to DB</button>
+    <button onClick="buttonClicked(100)">Add 100 Entries to DB</button>
+    <button onClick="buttonClicked('getAll')">Get all Docs</button>
+    <button onClick="buttonClicked('deleteAll')">Delete all Docs</button>
 
     <br />
     <br />
 
     Danger zone
     <br />
-    <button onClick="Add10Entries(1000)">Add 1000 Entries to DB</button>
-    <button onClick="Add10Entries(10000)">Add 10,000 Entries to DB</button>
-    <button onClick="Add10Entries(100000)">Add 100,000 Entries to DB</button>
+    <button onClick="buttonClicked(1000)">Add 1000 Entries to DB</button>
+    <button onClick="buttonClicked(10000)">Add 10,000 Entries to DB</button>
+    <button onClick="buttonClicked(100000)">Add 100,000 Entries to DB</button>
     <br />
 
     <script src="app.js"></script>
