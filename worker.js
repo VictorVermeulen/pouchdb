@@ -1,12 +1,13 @@
 importScripts('./pouchdb-7.2.1.js');
 
-onmessage = async function(e) {  
-  const db = new PouchDB("kittens");
-  const number = e.data.number;
+function getRandomNumber() {
+  return Math.random();
+}
 
-  function getRandomNumber() {
-    return Math.random();
-  }
+const db = new PouchDB("kittens");
+
+onmessage = async function(e) {  
+  const { number } = e.data;
 
   switch (number) {
     case 'getAll':
